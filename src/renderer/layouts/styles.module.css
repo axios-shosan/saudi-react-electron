@@ -18,6 +18,7 @@ main {
 
 .container{
   width: fit-content;
+  margin: auto;
   margin-top: 91px;
   display: flex;
   gap: 90px;
@@ -29,6 +30,7 @@ main {
   font-weight: 700;
   font-size: 35.7238px;
   line-height: 43px;
+
 }
 
 .footerPara {
@@ -39,7 +41,29 @@ main {
   line-height: 26px;
 }
 
-.inputs{
-display: flex;
-flex-direction: column;
+.formHeader{
+  margin-bottom: 20px;
+}
+
+.form{
+  display: flex;
+  flex-direction: column;
+  width: 327px;
+}
+
+.input {
+  height: 30px;
+  margin-bottom: 20px;
+}
+
+.registerBtn {
+  width: 134.3px;
+height: 28.65px;
+left: 619px;
+top: 2815px;
+border: 0.893096px solid #FFFFFF;
+border-radius: 4.46548px;
+background-color: transparent;
+color: white;
+padding: 5px 18px;
 }

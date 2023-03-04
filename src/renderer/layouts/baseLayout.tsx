@@ -20,9 +20,9 @@ export default function BaseLayout({}: Props) {
               what you &apos d like to see here.
             </p>
           </div>
-          <div className={classes.form}>
+          <div className={classes.formContainer}>
             <h2 className={classes.formHeader}>Your Email</h2>
-            <div className={classes.inputs}>
+            <div className={classes.form}>
               <input type="text" className={classes.input} />
               <button className={classes.registerBtn}>Register now</button>
             </div>
