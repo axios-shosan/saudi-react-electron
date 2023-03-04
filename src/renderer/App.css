@@ -29,28 +29,28 @@ body {
 }
 
 a {
-  color: var(--grey);;
+  color: var(--blue);;
   text-decoration: none !important;
 }
 
 
 a:link {
-  color: var(--grey);;
+  color: var(--blue);;
   text-decoration: none;
 }
 
 a:visited {
-  color: var(--grey);
+  color: var(--blue);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--grey);
+  color: var(--blue);
   text-decoration: none;
 }
 
 a:active {
-  color: var(--grey);
+  color: var(--blue);
   text-decoration: none;
 }
 
@@ -59,11 +59,9 @@ a:active {
 
 @font-face {
   font-family: 'Displace-Medium';
-  src: url('../Fonts/Displace/Displace20-Medium.0d89bcfd.ttf')
-    format('opentype');
+  src: url('../Fonts/Displace/Displace20-Medium.0d89bcfd.ttf');
 }
 @font-face {
   font-family: 'Displace-Regular';
-    src: url('../Fonts/Displace/Displace20-Regular.b6b66228.otf')
-      format('opentype');
+    src: url('../Fonts/Displace/Displace20-Regular.b6b66228.otf');
 }

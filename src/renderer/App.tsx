@@ -3,6 +3,7 @@ import BaseLayout from './layouts/baseLayout';
 import HomePage from './screens/Home';
 import DataPage from './screens/Data';
 import PortalPage from './screens/Portal';
+import './App.css';
 
 export default function App() {
   return (
