@@ -17,11 +17,12 @@
 }
 
 .heroHeader {
+  font-family: 'Displace-Medium';
   position: absolute;
   top: 150px;
   left: 40px;
   font-size: 60px;
-  font-family: Displace-Medium;
+  /* color: wheat; */
 }
 
 .description {

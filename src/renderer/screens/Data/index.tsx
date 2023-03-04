@@ -1,9 +1,9 @@
 import React from 'react';
-import classes from './styles.module.css';
 import Footer from 'renderer/components/Footer';
 import DataCards from 'renderer/components/DataCardsSection';
 import { Link } from 'react-router-dom';
 import arrowIcon from '../../../images/arrow-icon.png';
+import classes from './styles.module.css';
 
 type Props = {};
 
@@ -36,7 +36,7 @@ export default function DataPage({}: Props) {
           <img src={arrowIcon} alt="" />
         </Link>
       </main>
-      <Footer></Footer>;
+      <Footer />;
     </div>
   );
 }

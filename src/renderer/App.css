@@ -55,16 +55,15 @@ a:active {
 }
 
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 @font-face {
-  font-family: Displace-Medium;
+  font-family: 'Displace-Medium';
   src: url('../Fonts/Displace/Displace20-Medium.0d89bcfd.ttf')
     format('opentype');
 }
 @font-face {
-  font-family: Displace-Regular;
-  src: url('../Fonts/Displace/Displace20-Regular.b6b66228.otf')
-    format('opentype');
+  font-family: 'Displace-Regular';
+    src: url('../Fonts/Displace/Displace20-Regular.b6b66228.otf')
+      format('opentype');
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');

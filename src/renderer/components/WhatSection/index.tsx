@@ -11,51 +11,39 @@ export default function WhatSection() {
     <div className={classes.container}>
       <FieldCard
         image={Elearning}
-        title={'Marketplace'}
-        text={
-          'Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace '
-        }
-        link={'/data'}
+        title="Marketplace"
+        text="Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace "
+        link="/data"
       />
       <FieldCard
         image={stoch}
-        title={'Marketplace'}
-        text={
-          'Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace '
-        }
-        link={'/portal'}
+        title="Marketplace"
+        text="Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace "
+        link="/portal"
       />{' '}
       <FieldCard
         image={marketplce}
-        title={'Marketplace'}
-        text={
-          'Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace '
-        }
-        link={'/'}
+        title="Marketplace"
+        text="Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace "
+        link="/"
       />
       <FieldCard
         image={sidr}
-        title={'Marketplace'}
-        text={
-          'Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace '
-        }
-        link={'/'}
+        title="Marketplace"
+        text="Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace "
+        link="/"
       />
       <FieldCard
         image={Elearning}
-        title={'Marketplace'}
-        text={
-          'Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace '
-        }
-        link={'/'}
+        title="Marketplace"
+        text="Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace "
+        link="/"
       />
       <FieldCard
         image={Elearning}
-        title={'Marketplace'}
-        text={
-          'Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace '
-        }
-        link={'/'}
+        title="Marketplace"
+        text="Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace "
+        link="/"
       />
     </div>
   );

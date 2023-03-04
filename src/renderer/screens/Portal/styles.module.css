@@ -22,7 +22,7 @@
   top: 150px;
   left: 40px;
   font-size: 60px;
-  font-family: Displace-Medium;
+  font-family: 'Displace-Medium';
 }
 
 .heroText {
@@ -30,7 +30,7 @@
 
   top: 280px;
   left: 40px;
-  font-family: Displace-Medium;
+  font-family: 'Displace-Medium';
 }
 
 .description {
