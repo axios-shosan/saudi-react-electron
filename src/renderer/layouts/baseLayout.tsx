@@ -17,7 +17,7 @@ export default function BaseLayout({}: Props) {
             <p className={classes.footerPara}>
               Stay in touch for updates and new modules offered <br />
               on Saudi Experts . And please reach out and tell us <br />
-              what you'd like to see here.
+              what you &apos d like to see here.
             </p>
           </div>
           <div className={classes.form}>

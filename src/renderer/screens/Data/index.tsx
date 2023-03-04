@@ -36,7 +36,6 @@ export default function DataPage({}: Props) {
           <img src={arrowIcon} alt="" />
         </Link>
       </main>
-      <Footer />;
     </div>
   );
 }

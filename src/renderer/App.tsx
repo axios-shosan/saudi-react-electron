@@ -13,9 +13,11 @@ export default function App() {
   return (
     <Router>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/data" element={<DataPage />} />
-        <Route path="/portal" element={<PortalPage />} />
+        <Route path="/" element={<BaseLayout />}>
+          <Route path="" element={<HomePage />} />
+          <Route path="data" element={<DataPage />} />
+          <Route path="portal" element={<PortalPage />} />
+        </Route>
       </Routes>
     </Router>
   );

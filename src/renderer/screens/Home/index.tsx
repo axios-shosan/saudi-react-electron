@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from 'renderer/components/Footer';
 import classes from './styles.module.css';
 import EssentielsIcon from '../../../images/home/Essentials.png';
 import BuildingIcon from '../../../images/home/building-icon.png';
@@ -57,7 +56,6 @@ export default function HomePage({}: Props) {
         </div>
         <WhatSection />
       </main>
-      <Footer></Footer>
     </div>
   );
 }

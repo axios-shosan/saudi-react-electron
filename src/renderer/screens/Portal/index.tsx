@@ -28,7 +28,6 @@ export default function PortalPage({}: Props) {
           <img src={arrowIcon} alt="" />
         </Link>
       </main>
-      <Footer></Footer>;
     </div>
   );
 }
