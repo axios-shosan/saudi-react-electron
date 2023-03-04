@@ -1,5 +1,4 @@
 import React from 'react';
-import Footer from 'renderer/components/Footer';
 import DataCards from 'renderer/components/DataCardsSection';
 import { Link } from 'react-router-dom';
 import arrowIcon from '../../../images/arrow-icon.png';
@@ -20,7 +19,7 @@ export default function DataPage({}: Props) {
           </div>
         </div>
         <div className={classes.description}>
-          <h1>Data Reposositories</h1>
+          <h1 className={classes.sectionHeader}>Data Reposositories</h1>
           <p className={classes.descriptionText}>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
             voluptate mollitia neque expedita qui optio fugit soluta provident
