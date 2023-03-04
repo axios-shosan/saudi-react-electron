@@ -1,23 +1,21 @@
 .container {
-position: relative;
-width: 300px;
-height: 200px;
-background-color: white;
-border-radius: 10px;
-
-box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.64);
+  position: relative;
+  width: 350px;
+  height: 250px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 3px 0px rgba(0,0,0,0.64);
 }
 
 .image {
-  width: 300px;
-  height: 127px;
+  width: 350px;
   object-fit: cover;
   border-radius: 10px 10px 0 0;
+  margin-bottom: 10px;
 }
 
 .cardHeader {
   margin-left : 20px;
-  margin-bottom: 5px;
   font-size: 20px;
   font-family: 'Displace-Medium';
 }
