@@ -1,0 +1,14 @@
+.link {
+  position: absolute;
+  bottom: 25px;
+  height: 53px;
+  font-size: 30px;
+  background-color: #00A7BB;
+  color: white !important;
+  text-decoration: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 45px;
+  padding-right: 45px;
+  z-index: 999999;
+}

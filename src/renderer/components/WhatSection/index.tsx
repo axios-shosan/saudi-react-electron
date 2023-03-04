@@ -25,25 +25,25 @@ export default function WhatSection() {
         image={marketplce}
         title="Marketplace"
         text="Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace "
-        link="/"
+        link="/iframe/e-learning"
       />
       <FieldCard
         image={sidr}
         title="Marketplace"
         text="Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace "
-        link="/"
+        link="/iframe/stoch"
       />
       <FieldCard
         image={Elearning}
         title="Marketplace"
         text="Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace "
-        link="/"
+        link="/iframe/marketplace"
       />
       <FieldCard
         image={Elearning}
         title="Marketplace"
         text="Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace "
-        link="/"
+        link="/iframe/business"
       />
     </div>
   );

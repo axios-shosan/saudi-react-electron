@@ -1,0 +1,11 @@
+.container {
+  width: 1080px;
+  height: 1920px;
+  background-color: var(--bg);
+}
+
+.frame {
+  width: 100vw;
+  height: 95vh;
+  z-index: -1;
+}
