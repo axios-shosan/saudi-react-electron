@@ -3,9 +3,9 @@ import BaseLayout from './layouts/baseLayout/baseLayout';
 import HomePage from './screens/Home';
 import DataPage from './screens/Data';
 import PortalPage from './screens/Portal';
-import './App.css';
 import IframeLayout from './layouts/IframeLayout';
 import IframePage from './screens/Iframe';
+import './App.css';
 
 export default function App() {
   return (
