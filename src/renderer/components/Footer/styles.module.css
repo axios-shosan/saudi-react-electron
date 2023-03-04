@@ -1,0 +1,40 @@
+.footer {
+  position: fixed;
+  width: 1080px;
+  height: 300px;
+  bottom: 0;
+  background-color: #00A7BB;
+  color: white;
+  padding-left: 145px;
+  padding-right: 145px;
+}
+
+
+
+.container{
+  width: fit-content;
+  margin-top: 91px;
+  display: flex;
+  gap: 90px;
+}
+
+.footerHeader {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 35.7238px;
+  line-height: 43px;
+}
+
+.footerPara {
+  font-family: 'Gotham';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14.2895px;
+  line-height: 26px;
+}
+
+.inputs{
+display: flex;
+flex-direction: column;
+}

@@ -1,0 +1,55 @@
+
+.main {
+  position: relative;
+  background-color: #f8f8f8;
+  width: 1080px;
+  height: 1620px;
+  color: #303030;
+}
+
+.hero {
+  position: relative;
+  height: 500px;
+  background-image: url("../../../images/portals/portal-banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  margin-bottom: 150px;
+}
+
+.heroHeader {
+  position: absolute;
+  top: 150px;
+  left: 40px;
+  font-size: 60px;
+  font-family: Displace-Medium;
+}
+
+.heroText {
+  position: absolute;
+
+  top: 280px;
+  left: 40px;
+  font-family: Displace-Medium;
+}
+
+.description {
+  margin-left: 80px;
+  margin-right: 80px;
+  margin-bottom: 60px;
+  margin-top: 60px;
+}
+
+.link {
+  position: absolute;
+  bottom: 10px;
+  height: 63px;
+  font-size: 30px;
+  background-color: #00A7BB;
+  color: white;
+  text-decoration: none;
+  padding-top: 30px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+

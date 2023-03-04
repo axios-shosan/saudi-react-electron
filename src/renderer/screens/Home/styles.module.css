@@ -1,0 +1,60 @@
+.main {
+  background-color: #f8f8f8;
+  width: 1080px;
+  height: 1620px;
+  color: #303030;
+}
+
+.hero {
+  position: relative;
+  height: 500px;
+  background-image: url("../../../images/home/home-banner.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
+.subTitles {
+  position: absolute;
+  bottom: 40px;
+  left: 90px;
+  margin-bottom: 40px;
+  color: white;
+}
+
+.heroHeader {
+  font-size: 40px;
+  font-family: Displace-regular;
+}
+
+.heroPara {
+  font-size: 20px;
+}
+
+.whySection {
+  margin-left: 100px;
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+.reasons {
+  display: flex;
+  flex-direction: row;
+  gap: 170px;
+  width: 100%;
+}
+
+.reason {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.reasonIcon {
+  width: 50px;
+  height: auto;
+}
+

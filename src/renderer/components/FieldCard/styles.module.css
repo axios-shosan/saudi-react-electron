@@ -1,0 +1,38 @@
+.card {
+  width: 440px;
+  height: 200px;
+  background: #FFFFFF;
+  box-shadow: 0px 3px 30px rgba(0, 0, 0, 0.03);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.information {
+  padding-top: 10px;
+  display: flex ;
+  flex-direction: column;
+  gap: 30px
+}
+
+.textContainer {
+width: 220px;
+margin-top: 20px;
+margin-bottom: 30px;
+}
+
+.cardTitle {
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.cardText {
+  font-weight: 400;
+font-size: 16px;
+}
+
+.link {
+  color: #057D8B;
+  text-decoration: none;
+}

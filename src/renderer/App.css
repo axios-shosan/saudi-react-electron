@@ -1,0 +1,70 @@
+/*
+ * @NOTE: Prepend a `~` to css file paths that are in your node_modules
+ *        See https://github.com/webpack-contrib/sass-loader#imports
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --grey: #303030;
+  --blue: #00A7BB;
+  --bg: #D9D9D9;
+  --dark-blue: #057D8B;
+  --light-white: #EAEEF2;
+
+}
+
+body {
+  position: relative;
+  color: white;
+  height: 1920px;
+  width: 1080px;
+  background-color: black;
+  font-family: sans-serif;
+  /* overflow-y: hidden; */
+}
+
+a {
+  color: var(--grey);;
+  text-decoration: none !important;
+}
+
+
+a:link {
+  color: var(--grey);;
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--grey);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--grey);
+  text-decoration: none;
+}
+
+a:active {
+  color: var(--grey);
+  text-decoration: none;
+}
+
+
+
+@font-face {
+  font-family: Displace-Medium;
+  src: url('../Fonts/Displace/Displace20-Medium.0d89bcfd.ttf')
+    format('opentype');
+}
+@font-face {
+  font-family: Displace-Regular;
+  src: url('../Fonts/Displace/Displace20-Regular.b6b66228.otf')
+    format('opentype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
