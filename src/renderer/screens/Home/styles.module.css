@@ -40,8 +40,9 @@
 .reasons {
   display: flex;
   flex-direction: row;
-  gap: 170px;
+  gap: 140px;
   width: 100%;
+  font-family: 'Displace-Medium';
 }
 
 .reason {
@@ -50,11 +51,16 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .reasonIcon {
-  width: 50px;
+  width: 70px;
   height: auto;
+}
+
+.whyTitle {
+  font-family: 'Displace-Medium';
 }
 

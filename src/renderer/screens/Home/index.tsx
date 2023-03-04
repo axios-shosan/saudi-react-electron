@@ -1,9 +1,9 @@
+import WhatSection from 'renderer/components/WhatSection';
 import React from 'react';
 import classes from './styles.module.css';
 import EssentielsIcon from '../../../images/home/Essentials.png';
 import BuildingIcon from '../../../images/home/building-icon.png';
 import DiamondIcon from '../../../images/home/diamond.png';
-import WhatSection from 'renderer/components/WhatSection';
 
 type Props = {};
 
@@ -21,7 +21,7 @@ export default function HomePage({}: Props) {
           </div>
         </div>
         <div className={classes.whySection}>
-          <h1>Why join Saudi Expert</h1>
+          <h1 className={classes.whyTitle}>Why join Saudi Expert ?</h1>
           <div className={classes.reasons}>
             <div className={classes.reason}>
               <img
@@ -37,7 +37,11 @@ export default function HomePage({}: Props) {
               </p>
             </div>
             <div className={classes.reason}>
-              <img src={BuildingIcon} alt="Icon" width={'45px'} />
+              <img
+                src={BuildingIcon}
+                alt="Icon"
+                className={classes.reasonIcon}
+              />
               <p>
                 Get more exposure for your
                 <br />
@@ -45,7 +49,11 @@ export default function HomePage({}: Props) {
               </p>
             </div>
             <div className={classes.reason}>
-              <img src={DiamondIcon} alt="Icon" />
+              <img
+                className={classes.reasonIcon}
+                src={DiamondIcon}
+                alt="Icon"
+              />
               <p>
                 Get more exposure for your
                 <br />

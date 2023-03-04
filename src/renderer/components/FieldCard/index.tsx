@@ -1,6 +1,6 @@
 import React from 'react';
-import classes from './styles.module.css';
 import { Link, useNavigate } from 'react-router-dom';
+import classes from './styles.module.css';
 import arrowIcon from '../../../images/arrow-icon.png';
 
 type Props = {
@@ -13,6 +13,7 @@ type Props = {
 export default function FieldCard({ image, title, text, link }: Props) {
   const navigate = useNavigate();
   return (
+    // eslint-disable-next-line jsx-a11y/click-events-have-key-events
     <div
       className={classes.card}
       onClick={() => {

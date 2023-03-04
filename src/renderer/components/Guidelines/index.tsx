@@ -11,16 +11,10 @@ type Props = {};
 export default function GuidelinesSection({}: Props) {
   return (
     <div className={classes.container}>
-      <GuidelineCard image={grandImage} title={'Grand Guidelines'} />
-      <GuidelineCard image={partnerImage} title={'Partner Guidelines'} />
-      <GuidelineCard
-        image={merchandiseImage}
-        title={'Merchandise Guidelines'}
-      />
-      <GuidelineCard
-        image={photographyImage}
-        title={'Photography Guidelines'}
-      />
+      <GuidelineCard image={grandImage} title="Grand Guidelines" />
+      <GuidelineCard image={partnerImage} title="Partner Guidelines" />
+      <GuidelineCard image={merchandiseImage} title="Merchandise Guidelines" />
+      <GuidelineCard image={photographyImage} title="Photography Guidelines" />
     </div>
   );
 }

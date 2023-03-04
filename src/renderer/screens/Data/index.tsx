@@ -21,7 +21,7 @@ export default function DataPage({}: Props) {
         </div>
         <div className={classes.description}>
           <h1>Data Reposositories</h1>
-          <p>
+          <p className={classes.descriptionText}>
             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo
             voluptate mollitia neque expedita qui optio fugit soluta provident
             quaerat fuga pariatur eos amet distinctio similique quas corporis,

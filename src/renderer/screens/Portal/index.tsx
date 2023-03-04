@@ -1,9 +1,8 @@
 import React from 'react';
-import classes from './styles.module.css';
-import Footer from 'renderer/components/Footer';
 import { Link } from 'react-router-dom';
-import arrowIcon from '../../../images/arrow-icon.png';
 import GuidelinesSection from 'renderer/components/Guidelines';
+import arrowIcon from '../../../images/arrow-icon.png';
+import classes from './styles.module.css';
 
 type Props = {};
 
@@ -22,6 +21,7 @@ export default function PortalPage({}: Props) {
             </p>
           </div>
         </div>
+        <h1 className={classes.guidelinesHeader}>Guidelines</h1>
         <GuidelinesSection />
         <Link className={classes.link} to="/">
           <span>BACK</span>

@@ -1,9 +1,4 @@
-import {
-  MemoryRouter as Router,
-  Routes,
-  Route,
-  Navigate,
-} from 'react-router-dom';
+import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import BaseLayout from './layouts/baseLayout';
 import HomePage from './screens/Home';
 import DataPage from './screens/Data';

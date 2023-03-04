@@ -20,7 +20,7 @@
 .heroHeader {
   position: absolute;
   top: 150px;
-  left: 40px;
+  left: 70px;
   font-size: 60px;
   font-family: 'Displace-Medium';
 }
@@ -29,7 +29,7 @@
   position: absolute;
 
   top: 280px;
-  left: 40px;
+  left: 70px;
   font-family: 'Displace-Medium';
 }
 
@@ -43,13 +43,18 @@
 .link {
   position: absolute;
   bottom: 10px;
-  height: 63px;
+  height: 53px;
   font-size: 30px;
   background-color: #00A7BB;
   color: white;
   text-decoration: none;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-left: 45px;
   padding-right: 45px;
 }
 
+.guidelinesHeader{
+  margin-left: 70px;
+  font-weight: 900;
+  margin-bottom: 50px;
+}

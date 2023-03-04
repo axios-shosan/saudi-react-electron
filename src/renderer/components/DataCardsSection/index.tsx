@@ -15,33 +15,33 @@ export default function DataCards({}: Props) {
     <div className={classes.container}>
       <DataCard
         image={compassImage}
-        title={'Compass'}
-        text={'Its all about Visits, Spend and NPS'}
+        title="Compass"
+        text="Its all about Visits, Spend and NPS"
       />
       <DataCard
         image={campaignImage}
-        title={'Campaign Tracker'}
-        text={'Greater Marketing impact'}
+        title="Campaign Tracker"
+        text="Greater Marketing impact"
       />
       <DataCard
         image={visitorImage}
-        title={'Visitor Experience'}
-        text={'Fixing the basics and delighting visitors'}
+        title="Visitor Experience"
+        text="Fixing the basics and delighting visitors"
       />
       <DataCard
         image={seasonImage}
-        title={'Season Programs'}
-        text={'Winning Summer & Winter Seasons'}
+        title="Season Programs"
+        text="Winning Summer & Winter Seasons"
       />
       <DataCard
         image={cruiseImage}
-        title={'Cruise'}
-        text={'Cruise performance insights'}
+        title="Cruise"
+        text="Cruise performance insights"
       />
       <DataCard
         image={strategyImage}
-        title={'Strategy Execution '}
-        text={'Progress on STA annual business goals '}
+        title="Strategy Execution "
+        text="Progress on STA annual business goals "
       />
     </div>
   );

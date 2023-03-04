@@ -29,18 +29,24 @@
   margin-left: 80px;
   margin-right: 80px;
   margin-bottom: 60px;
-  margin-top: 60px;
+  margin-top: 100px;
 }
 
 .link {
   position: absolute;
   bottom: 10px;
-  height: 63px;
+  height: 53px;
   font-size: 30px;
   background-color: #00A7BB;
   color: white;
   text-decoration: none;
-  padding-top: 30px;
+  padding-top: 20px;
   padding-left: 45px;
   padding-right: 45px;
+}
+
+.descriptionText {
+  font-family: 'Displace-Medium';
+  font-size: 20px;
+  line-height: 23px;
 }
