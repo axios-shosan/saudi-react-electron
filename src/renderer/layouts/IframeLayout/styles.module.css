@@ -1,6 +1,10 @@
-.link {
+.main {
+  position: relative;
+}
+.navLinkAx {
   position: absolute;
-  bottom: 25px;
+  z-index: 999999 !important;
+  bottom: 50px;
   height: 53px;
   font-size: 30px;
   background-color: #00A7BB;
@@ -10,9 +14,9 @@
   padding-bottom: 10px;
   padding-left: 45px;
   padding-right: 45px;
-  z-index: 999999;
   transform: translateX(-100%);
   animation: slideIn 0.5s forwards;
+  border: none;
 }
 
 
