@@ -61,6 +61,13 @@
   height: auto;
   margin-bottom: 30px;
 }
+.logo {
+  width: auto;
+  height: 160px;
+  margin: auto;
+  display: flex;
+  padding-top: 35px;
+}
 
 .whyTitle {
   font-family: 'Displace-Medium';

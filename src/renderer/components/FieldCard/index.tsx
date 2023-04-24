@@ -20,15 +20,16 @@ export default function FieldCard({ image, title, text, link }: Props) {
         navigate(link);
       }}
     >
-      <img src={image} alt="" />
+      <img className={classes.image} src={image} alt="" />
       <div className={classes.informaion}>
         <div className={classes.textContainer}>
           <h2 className={classes.cardTitle}>{title}</h2>
+        
           <p className={classes.cardText}>{text}</p>
         </div>
         <Link className={classes.link} to={link}>
           <span>Discover</span>
-          <img src={arrowIcon} alt="next" />
+          <img src={arrowIcon} alt="next"/>
         </Link>
       </div>
     </div>

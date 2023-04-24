@@ -9,12 +9,12 @@
  * `./src/main.js` using webpack. This gives us some performance wins.
  */
 import path from 'path';
-import { app, BrowserWindow, shell, ipcMain } from 'electron';
+import { app, BrowserWindow, shell, ipcMain, session } from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
-
+import fs from "fs";
 class AppUpdater {
   constructor() {
     log.transports.file.level = 'info';
@@ -29,6 +29,13 @@ ipcMain.on('ipc-example', async (event, arg) => {
   const msgTemplate = (pingPong: string) => `IPC test: ${pingPong}`;
   console.log(msgTemplate(arg));
   event.reply('ipc-example', msgTemplate('pong'));
+});
+
+ipcMain.on('add-email', (event, email) => {
+  fs.appendFile('emails.txt', email + '\n', (err) => {
+    if (err) throw err;
+    console.log('Email added to file');
+  });
 });
 
 if (process.env.NODE_ENV === 'production') {
@@ -74,22 +81,32 @@ const createWindow = async () => {
     width: 1080,
     height: 1920,
     autoHideMenuBar: true,
-    resizable: true,
-    fullscreen: false,
+    resizable: false,
+    fullscreen: true,
     icon: getAssetPath('icon.png'),
     webPreferences: {
-      devTools: true,
+      webSecurity:false,
+      devTools: false,
       preload: app.isPackaged
         ? path.join(__dirname, 'preload.js')
         : path.join(__dirname, '../../.erb/dll/preload.js'),
     },
+    
   });
+
+  session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
+    const headers = Object.assign({}, details.responseHeaders);
+    delete headers['X-Frame-Options'];
+    callback({ responseHeaders: headers });
+  });
+
+  
 
   mainWindow.once('ready-to-show', () => {
     if (!mainWindow) {
       throw new Error('"mainWindow" is not defined');
     }
-    mainWindow.webContents.setZoomFactor(0.8);
+    mainWindow.webContents.setZoomFactor(1);
   });
 
   mainWindow.loadURL(resolveHtmlPath('index.html'));

@@ -1,7 +1,9 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import classes from './styles.module.css';
 
 export default function index() {
+
+
   return (
     <footer className={classes.footer}>
       <div className={classes.container}>
@@ -16,7 +18,7 @@ export default function index() {
         <div className={classes.form}>
           <h2 className={classes.formHeader}>Your Email</h2>
           <div className={classes.inputs}>
-            <input type="text" className={classes.input} />
+            <input type="text" className={classes.input} onChange={()=>{console.log("awdwd")}} />
             <button className={classes.registerBtn}>Register now</button>
           </div>
         </div>

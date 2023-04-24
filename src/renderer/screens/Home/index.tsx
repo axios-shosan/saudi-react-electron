@@ -4,7 +4,7 @@ import classes from './styles.module.css';
 import EssentielsIcon from '../../../images/home/Essentials.png';
 import BuildingIcon from '../../../images/home/building-icon.png';
 import DiamondIcon from '../../../images/home/diamond.png';
-
+import logo from '../../../images/home/Logo.png';
 type Props = {};
 
 export default function HomePage({}: Props) {
@@ -12,6 +12,7 @@ export default function HomePage({}: Props) {
     <div>
       <main className={classes.main}>
         <div className={classes.hero}>
+          <img src={logo} alt="" className={classes.logo} />
           <div className={classes.subTitles}>
             <h1 className={classes.heroHeader}>Saudi Expert</h1>
             <p className={classes.heroPara}>

@@ -63,7 +63,7 @@ h6 {
   /* animation: fadeInText 5s; */
   /* color: hsl(0 0% 0% / 0.7); */
   opacity: 0;
-  transform: translateX(-2rem);
+  transform: translateX(0);
   animation: fadeInUp ease 1.5s forwards !important;
 }
 

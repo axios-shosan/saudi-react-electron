@@ -1,0 +1,27 @@
+.image-container {
+
+  position: relative;
+}
+
+.image {
+  width: 510px;
+  position: relative;
+   transition:  transform   0.3s ease-out,position 0.3s ease-out; 
+   transform:  scale(1);
+   z-index: 0;
+
+}
+
+.expanded {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+ transform:  scale(2);
+ z-index: 100;
+ 
+
+
+}

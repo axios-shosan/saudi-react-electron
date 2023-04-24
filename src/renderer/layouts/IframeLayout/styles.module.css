@@ -2,7 +2,7 @@
   position: relative;
 }
 .navLinkAx {
-  position: absolute;
+  position:absolute;
   z-index: 999999 !important;
   bottom: 50px;
   height: 53px;

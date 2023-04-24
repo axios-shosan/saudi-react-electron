@@ -5,3 +5,7 @@
   grid-gap: 20px 15px;
     grid-template-rows: repeat(3, 1fr);
 }
+
+.FieldCard{
+
+}

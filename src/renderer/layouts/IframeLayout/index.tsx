@@ -15,6 +15,7 @@ export default function IframeLayout({}: Props) {
         <button
           className={classes.navLinkAx}
           onClick={() => {
+            
             navigate('/');
           }}
         >

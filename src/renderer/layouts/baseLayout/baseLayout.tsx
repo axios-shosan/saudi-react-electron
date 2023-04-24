@@ -1,10 +1,14 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import { Outlet } from 'react-router-dom';
 import classes from './styles.module.css';
-
+import fs from "fs";
 type Props = {};
 
 export default function BaseLayout({}: Props) {
+
+  const [message, setMessage] = useState("");
+
+ 
   return (
     <div>
       <main className={classes.main}>
@@ -23,12 +27,17 @@ export default function BaseLayout({}: Props) {
           <div className={classes.formContainer}>
             <h2 className={classes.formHeader}>Your Email</h2>
             <div className={classes.form}>
-              <input type="text" className={classes.input} />
-              <button className={classes.registerBtn}>Register now</button>
+              <input type="text" className={classes.input} value={message} onChange={(e)=>{setMessage(e.target.value)} }/>
+              <button className={classes.registerBtn} onClick={()=>{SubmitEmail(message);setMessage("");}} >Register now</button>
             </div>
           </div>
         </div>
       </footer>
     </div>
   );
+}
+
+function SubmitEmail(email:string)
+{
+  window.electron.ipcRenderer.sendMessage('add-email',email);
 }

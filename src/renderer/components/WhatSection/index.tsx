@@ -5,12 +5,14 @@ import marketplce from '../../../images/home/marketplace.png';
 import sidr from '../../../images/home/sidr.png';
 import stoch from '../../../images/home/stoch.png';
 import portal from '../../../images/home/portal.png';
+import business from '../../../images/home/business.jpg';
 import classes from './styles.module.css';
 
 export default function WhatSection() {
   return (
     <div className={classes.container}>
       <FieldCard
+        
         image={marketplce}
         title="Marketplace"
         text="Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace "
@@ -36,8 +38,8 @@ decision making.."
         link="/data"
       />
       <FieldCard
-        image={Elearning}
-        title="Business Direction"
+        image={business}
+        title="Business Directory"
         text="Get exposure to millions of visitors. Benefit from a wider audience base by uploading experiences to the marketplace "
         link="/iframe/business"
       />

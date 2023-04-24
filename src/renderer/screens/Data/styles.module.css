@@ -57,6 +57,27 @@
 .sectionHeader {
   margin-bottom: 30px;
 }
+.holder{
+  display: flex;
+  justify-content: space-around;
+  margin-top: auto;
+  margin-bottom: auto;
+  width: 100%;
+}
+.overlay{
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+position: absolute;
+  top: 0;
+  left: 0;
+background-color: rgba(0, 0, 0, 0.466);
+  z-index: 10;
+}
+.screenshot{
+  width: 515px;
+  height: auto;
+}
 
 
 @keyframes slideIn {

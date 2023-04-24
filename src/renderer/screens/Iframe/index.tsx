@@ -8,9 +8,11 @@ type Props = {
 };
 
 export default function IframePage({ link }: Props) {
+  console.log("first")
   return (
     <div className={classes.container}>
-      <iframe className={classes.frame} src={link} allowFullScreen></iframe>
+      <iframe  className={classes.frame} src={link} ></iframe>
+     
     </div>
   );
 }
