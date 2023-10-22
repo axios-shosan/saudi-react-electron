@@ -14,7 +14,9 @@ import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
-import fs from "fs";
+const fs = require('fs');
+const path = require('path');
+
 class AppUpdater {
   constructor() {
     log.transports.file.level = 'info';
@@ -28,8 +30,30 @@ let mainWindow: BrowserWindow | null = null;
 ipcMain.on('ipc-example', async (event, arg) => {
   const msgTemplate = (pingPong: string) => `IPC test: ${pingPong}`;
   console.log(msgTemplate(arg));
-  event.reply('ipc-example', msgTemplate('pong'));
+  const currentDirectory = process.cwd();
+
+      // Define the path to your JSON file within the current directory
+      const jsonFilePath = path.join(currentDirectory, 'urls.json');
+      console.log(jsonFilePath);
+      // Read the JSON file
+      fs.readFile(jsonFilePath, 'utf8', (err, data) => {
+        if (err) {
+          console.error('Error reading JSON file:', err);
+          return;
+        }
+
+        try {
+          const json = JSON.parse(data);
+          console.log('Loaded JSON data:', json);
+          event.reply('ipc-example', json);
+         
+        } catch (parseError) {
+          console.error('Error parsing JSON data:', parseError);
+        }
+      });
+
 });
+
 
 ipcMain.on('add-email', (event, email) => {
   fs.appendFile('emails.txt', email + '\n', (err) => {
@@ -82,16 +106,18 @@ const createWindow = async () => {
     height: 1920,
     autoHideMenuBar: true,
     resizable: false,
-    fullscreen: true,
+    fullscreen: false,
     icon: getAssetPath('icon.png'),
     webPreferences: {
-      webSecurity:false,
-      devTools: false,
+      webviewTag: true,
+      nodeIntegration: true,
+      webSecurity: false,
+      devTools: true,
+
       preload: app.isPackaged
         ? path.join(__dirname, 'preload.js')
         : path.join(__dirname, '../../.erb/dll/preload.js'),
     },
-    
   });
 
   session.defaultSession.webRequest.onHeadersReceived((details, callback) => {
@@ -99,8 +125,6 @@ const createWindow = async () => {
     delete headers['X-Frame-Options'];
     callback({ responseHeaders: headers });
   });
-
-  
 
   mainWindow.once('ready-to-show', () => {
     if (!mainWindow) {
@@ -143,7 +167,7 @@ const createWindow = async () => {
 /**
  * Add event listeners...
  */
-
+const proxyServer = '127.0.0.1:8080';
 app.on('window-all-closed', () => {
   // Respect the OSX convention of having the application in memory even
   // after all windows have been closed
@@ -151,7 +175,10 @@ app.on('window-all-closed', () => {
     app.quit();
   }
 });
-
+app.on('ready', () => {
+  // Set the proxy server using the command-line switch
+  app.commandLine.appendSwitch('proxy-server', proxyServer);
+});
 app
   .whenReady()
   .then(() => {
@@ -160,6 +187,8 @@ app
       // On macOS it's common to re-create a window in the app when the
       // dock icon is clicked and there are no other windows open.
       if (mainWindow === null) createWindow();
+      // Get the current working directory
+      
     });
   })
   .catch(console.log);

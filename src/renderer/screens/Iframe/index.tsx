@@ -8,11 +8,14 @@ type Props = {
 };
 
 export default function IframePage({ link }: Props) {
-  console.log("first")
+  console.log( link )
   return (
     <div className={classes.container}>
-      <iframe  className={classes.frame} src={link} ></iframe>
-     
+      {/* <iframe  className={classes.frame} src={link} ></iframe> */}
+      <webview className={classes.frame} src={link} ></webview>
+
+
+
     </div>
   );
 }

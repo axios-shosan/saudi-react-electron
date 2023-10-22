@@ -8,6 +8,7 @@ import IframePage from './screens/Iframe';
 import './App.css';
 
 export default function App() {
+  console.log(global.data);
   return (
     <Router>
       <Routes>
@@ -19,22 +20,28 @@ export default function App() {
         <Route path="/iframe" element={<IframeLayout />}>
           <Route
             path="e-learning"
-            element={<IframePage link="https://learning.sta.gov.sa/" />}
+            element={<IframePage link={global.data.elearning} />}
           />
           <Route
             path="stoch"
             element={
-              <IframePage link="https://stoch.sta.gov.sa/content/scp/sa/en/home.html" />
+              <IframePage link={global.data.stoch} />
             }
           />
           <Route
             path="marketplace"
-            element={<IframePage link="http://enablement.sta.gov.sa/s" />}
+            element={<IframePage link={global.data.marketplace} />}
           />
           <Route
             path="business"
             element={
-              <IframePage link="https://stoch.sta.gov.sa/en/business-directory/search-results.html" />
+              <IframePage link={global.data.business} />
+            }
+          />
+           <Route
+            path="chinese"
+            element={
+              <IframePage link={global.data.chinese} />
             }
           />
         </Route>
