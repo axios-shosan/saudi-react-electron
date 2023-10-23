@@ -37,9 +37,18 @@ ipcMain.on('ipc-example', async (event, arg) => {
   const msgTemplate = (pingPong: string) => `IPC test: ${pingPong}`;
   console.log(msgTemplate(arg));
   const currentDirectory = process.cwd();
+  let jsonFilePath= "";
+  if (app.isPackaged) {
+    // Code for the production environment
+   jsonFilePath = path.join(currentDirectory, '/resources/assets/urls.json');
+
+  } else {
+    // Code for the development environment
+     jsonFilePath = path.join(currentDirectory, '/assets/urls.json');
+  }
 
   // Define the path to your JSON file within the current directory
-  const jsonFilePath = path.join(currentDirectory, '/assets/urls.json');
+  
   console.log(jsonFilePath);
 
   // Read the JSON file
