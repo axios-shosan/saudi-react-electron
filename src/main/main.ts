@@ -9,13 +9,19 @@
  * `./src/main.js` using webpack. This gives us some performance wins.
  */
 import path from 'path';
-import { app, BrowserWindow, shell, ipcMain, session } from 'electron';
+import {
+  app,
+  BrowserWindow,
+  shell,
+  ipcMain,
+  session,
+  ipcRenderer,
+} from 'electron';
 import { autoUpdater } from 'electron-updater';
 import log from 'electron-log';
 import MenuBuilder from './menu';
 import { resolveHtmlPath } from './util';
 const fs = require('fs');
-const path = require('path');
 
 class AppUpdater {
   constructor() {
@@ -32,28 +38,27 @@ ipcMain.on('ipc-example', async (event, arg) => {
   console.log(msgTemplate(arg));
   const currentDirectory = process.cwd();
 
-      // Define the path to your JSON file within the current directory
-      const jsonFilePath = path.join(currentDirectory, 'urls.json');
-      console.log(jsonFilePath);
-      // Read the JSON file
-      fs.readFile(jsonFilePath, 'utf8', (err, data) => {
-        if (err) {
-          console.error('Error reading JSON file:', err);
-          return;
-        }
+  // Define the path to your JSON file within the current directory
+  const jsonFilePath = path.join(currentDirectory, 'urls.json');
+  console.log(jsonFilePath);
 
-        try {
-          const json = JSON.parse(data);
-          console.log('Loaded JSON data:', json);
-          event.reply('ipc-example', json);
-         
-        } catch (parseError) {
-          console.error('Error parsing JSON data:', parseError);
-        }
-      });
+  // Read the JSON file
+  fs.readFile(jsonFilePath, 'utf8', (err, data) => {
+    if (err) {
+      console.error('Error reading JSON file:', err);
+      return;
+    }
 
+    try {
+      const json = JSON.parse(data);
+
+      // Send the IPC message to the React component
+      event.reply('ipc-example', json);
+    } catch (parseError) {
+      console.error('Error parsing JSON data:', parseError);
+    }
+  });
 });
-
 
 ipcMain.on('add-email', (event, email) => {
   fs.appendFile('emails.txt', email + '\n', (err) => {
@@ -178,17 +183,19 @@ app.on('window-all-closed', () => {
 app.on('ready', () => {
   // Set the proxy server using the command-line switch
   app.commandLine.appendSwitch('proxy-server', proxyServer);
+
+  // ...
 });
 app
   .whenReady()
   .then(() => {
     createWindow();
+
     app.on('activate', () => {
       // On macOS it's common to re-create a window in the app when the
       // dock icon is clicked and there are no other windows open.
       if (mainWindow === null) createWindow();
       // Get the current working directory
-      
     });
   })
   .catch(console.log);

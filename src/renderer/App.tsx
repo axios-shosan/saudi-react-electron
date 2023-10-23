@@ -6,9 +6,29 @@ import PortalPage from './screens/Portal';
 import IframeLayout from './layouts/IframeLayout';
 import IframePage from './screens/Iframe';
 import './App.css';
+import {useState,useEffect} from 'react';
 
 export default function App() {
-  console.log(global.data);
+  const [data, setdata] = useState([]);
+
+
+
+   useEffect(() => {
+     // Set up the IPC listener when the component mounts
+     window.electron.ipcRenderer.once('ipc-example', (arg) => {
+      // eslint-disable-next-line no-console
+      console.log(arg);
+     setdata(arg)
+    });
+
+     // Clean up the IPC listener when the component unmounts
+     return () => {
+       window.electron.ipcRenderer.removeAllListeners('ipc-example');
+     };
+   }, []);
+
+
+
   return (
     <Router>
       <Routes>
@@ -20,28 +40,28 @@ export default function App() {
         <Route path="/iframe" element={<IframeLayout />}>
           <Route
             path="e-learning"
-            element={<IframePage link={global.data.elearning} />}
+            element={<IframePage link={data.elearning} />}
           />
           <Route
             path="stoch"
             element={
-              <IframePage link={global.data.stoch} />
+              <IframePage link={data.stoch} />
             }
           />
           <Route
             path="marketplace"
-            element={<IframePage link={global.data.marketplace} />}
+            element={<IframePage link={data.marketplace} />}
           />
           <Route
             path="business"
             element={
-              <IframePage link={global.data.business} />
+              <IframePage link={data.business} />
             }
           />
            <Route
             path="chinese"
             element={
-              <IframePage link={global.data.chinese} />
+              <IframePage link={data.chinese} />
             }
           />
         </Route>
