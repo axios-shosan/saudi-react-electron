@@ -39,7 +39,7 @@ ipcMain.on('ipc-example', async (event, arg) => {
   const currentDirectory = process.cwd();
 
   // Define the path to your JSON file within the current directory
-  const jsonFilePath = path.join(currentDirectory, 'urls.json');
+  const jsonFilePath = path.join(currentDirectory, '/assets/urls.json');
   console.log(jsonFilePath);
 
   // Read the JSON file
